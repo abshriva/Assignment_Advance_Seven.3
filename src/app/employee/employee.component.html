@@ -1,0 +1,26 @@
+<h1>Assignment 7.3 Custom Directive Example</h1>
+<br>
+<br>
+<div class="container">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Age</th>
+      <th>EmployeeId</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let emp of employees; let i=index" [IndexValue]=i
+     appBasicHighlightDirective>
+      <td>{{i+1}}</td>
+      <td>{{emp.firstName}}</td>
+      <td>{{emp.lastName}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.id}}</td>
+      </tr>
+  </tbody>
+</table>
+</div>
